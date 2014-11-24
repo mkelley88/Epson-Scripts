@@ -50,12 +50,12 @@ else:
 def printIt(width, height):
     y = 0
     brk = 0
-    if  im.size[0] > 500:
+    if  im.size[0] > 512:
         out = im.resize((width, height))
     else:
         out = im.resize((im.size[0],im.size[1]))
 
-    print ("Height = %d" % height)
+    print ("Height = %d" % height) # DEBUG #
     for y in range(0, height): 
         if (y*255+255) > height:
             box = (0, y*255, width, height)
